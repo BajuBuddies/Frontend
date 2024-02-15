@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main data</title>
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <main class="table">
+        <section class="table-head">
+            <ul class="list-wrapper">
+                <li><h1>Daftar Produk</h1></li>
+                <a href="add.html">
+                    <li><button class="add-button"> <i class="fa fa-plus"></i> Tambah</button></li>
+                </a>
+            </ul>
+        </section>
+        <section class="isi-produk">
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nama</th>
+                        <th>Stok</th>
+                        <th>Harga</th>
+                        <th>Deskripsi</th>
+                        <th>Gambar</th>
+                        <th>action</th>
+                    </tr>
+                </thead>
+                <tbody class="data-produk">
+                    <tr>
+                        <td>1</td>
+                        <td>Jaket </td>
+                        <td>200 </td>
+                        <td>Rp500.000</td>
+                        <td>jaket bagus</td>
+                        <td><img src="/Assets/0056a26b-ad1d-460d-ace7-b3642d221cbd.jpg" alt=""></td>
+                        <td class="action-button">
+                            <button class="delete-button"> <i class="fa fa-trash"></i> Delete</button>
+                            <a href="update.html">
+                                <button class="update-button"> <i class="fa fa-pencil"></i> Update</button>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="/Scripts/main.js"></script>
+    <script url = 'https://42e0-111-94-134-70.ngrok-free.app/produk'></script>
+</body>
+</html>
