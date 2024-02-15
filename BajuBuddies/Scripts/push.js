@@ -9,6 +9,7 @@ addProduk.addEventListener('submit', (e) => {
     formData.append('desc', deskripsiValue.value);
     formData.append('image', gambarValue.files[0]);
 
+    
     fetch(url, {
         method: "POST",
         body: formData
@@ -18,7 +19,8 @@ addProduk.addEventListener('submit', (e) => {
         const dataArr = [];
         dataArr.push(response);
         produkPost(dataArr);
-        window.location.replace('index.html');
+        window.location.href = ('index.html');
     })
     .catch(error => console.error('Error:', error));
+    
 })

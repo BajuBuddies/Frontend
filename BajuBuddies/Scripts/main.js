@@ -15,16 +15,14 @@ const produkPost = (posts) => {
         output += `  
         <tr data-id=${product.id}>
             <td>${product.id}</td>
-            <td>${product.name}</td>
-            <td>${product.stok} </td>
-            <td>${product.harga}</td>
-            <td>${product.desc}</td>
-            <td><img src="https://42e0-111-94-134-70.ngrok-free.app${product.gambar}" alt=""></td>
+            <td class="nama-produk">${product.name}</td>
+            <td class="stok-produk">${product.stok} </td>
+            <td class="harga-produk">${product.harga}</td>
+            <td class="desc-produk">${product.desc}</td>
+            <td class="img-produk"><img src="https://42e0-111-94-134-70.ngrok-free.app${product.gambar}" alt=""></td>
             <td class="action-button">
                 <button class="delete-button" data-id="${product.id}"> <i class="fa fa-trash"></i> Delete</button>
-                <a href="update.html">
-                    <button class="update-button" id="update-post" > <i class="fa fa-pencil"></i> Update</button>
-                </a>
+                <button class="update-button" id="update-post" data-id="${product.id}" > <i class="fa fa-pencil"></i> Update</button>
             </td>
         </tr>
     `;
@@ -43,7 +41,14 @@ fetch(url, {
 .then(res => res.json())
 .then(response => produkPost(response.data));
 
-
+postproduk.addEventListener('click', async function(event){
+    
+    if (event.target.classList.contains(('update-button'))){
+        console.log("hai")
+        const productId = event.target.dataset.productId; 
+        window.location.href = `update.html?id=${event.target.dataset.id}`;
+    }
+});
 
 
 

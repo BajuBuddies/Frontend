@@ -10,7 +10,7 @@
     <div class="container">
         <div class="box form-box">
             <header>Edit Data</header>
-            <form action="" method="post">
+            <form action="" method="post" id="updateForm">
                 <div class="field input">
                     <label for="nama">Nama</label>
                     <input type="text" name="nama" id="nama">
@@ -33,11 +33,14 @@
                 </div>
                 <div class="field">
                     <input type="submit" class="btn-submit" name="submit" value="submit" required>
-                    <input type="cancel" class="btn-cancel" name="cancel" value="cancel" required>
+                    <a href="index.html">
+                        <input type="cancel" class="btn-cancel" name="cancel" value="cancel" required>
+                    </a>
                 </div>
             </form>
         </div>
     </div>
     <script src="/BajuBuddies/Scripts/main.js"></script>
+    <script src="/BajuBuddies/Scripts/update.js"></script>
 </body>
 </html>
